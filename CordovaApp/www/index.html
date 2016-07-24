@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <!--
+        視需要在下方的中繼標籤中自訂內容安全性原則。將 'unsafe-inline' 加入 default-src 以啟用內嵌 JavaScript。
+        如需詳細資料，請參閱 http://go.microsoft.com/fwlink/?LinkID=617521
+    -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
+
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+    <!--<link rel="stylesheet" type="text/css" href="css/index.css">-->
+    <link href="css/jquery.mobile-1.4.5.min.css" rel="stylesheet" />
+    <title>CordovaApp</title>
+</head>
+<body>
+    <div data-role="page" id="app">
+        <h1>Apache Cordova</h1>
+        <div id="deviceready">
+            <input id="btnGetData" type="button" data-role="button" data-icon="search" value="取得臺北捷運列車到站站名資料" />
+
+            <table id="tableData" data-role="table" data-mode="columntoggle" class="ui-responsive ui-shadow">
+                <thead>
+                    <tr>
+                        <th data-priority="1">ID</th>
+                        <th data-priority="2">Station</th>
+                        <th data-priority="3">Destination</th>
+                        <th data-priority="4">UpdateTime</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+
+            <div id="error-msg" class="not-displayed">
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="scripts/platformOverrides.js"></script>
+    <script src="scripts/jquery-1.8.0.min.js"></script>
+    <script src="scripts/jquery.mobile-1.4.5.min.js"></script>
+    <script type="text/javascript" src="scripts/index.js"></script>
+    <script src="scripts/OpenData.js"></script>
+</body>
+</html>
